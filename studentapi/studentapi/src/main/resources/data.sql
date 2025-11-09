@@ -1,0 +1,2 @@
+INSERT INTO student (roll_number, first_name, last_name, email, department, academic_year, gpa) VALUES ('CS2025-001', 'Asha', 'Kumar', 'asha@example.com', 'CS', 2, 8.5),
+                                                                                                    ('CS2025-002', 'Ravi', 'Patel', 'ravi.patel@example.com', 'CS', 1, 7.9);
