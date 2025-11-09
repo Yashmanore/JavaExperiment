@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Student Registration</title>
+  <link rel="stylesheet" th:href="@{/styles.css}" />
+</head>
+<body>
+  <h1>Student Registration</h1>
+
+  <form th:action="@{/students}" th:object="${student}" method="post">
+    <div>
+      <label>Roll Number:</label>
+      <input th:field="*{rollNumber}" />
+      <div th:if="${#fields.hasErrors('rollNumber')}" th:errors="*{rollNumber}"></div>
+    </div>
+
+    <div>
+      <label>First name:</label>
+      <input th:field="*{firstName}" />
+      <div th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"></div>
+    </div>
+
+    <div>
+      <label>Last name:</label>
+      <input th:field="*{lastName}" />
+    </div>
+
+    <div>
+      <label>Email:</label>
+      <input th:field="*{email}" />
+      <div th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
+    </div>
+
+    <div>
+      <label>Department:</label>
+      <input th:field="*{department}" />
+      <div th:if="${#fields.hasErrors('department')}" th:errors="*{department}"></div>
+    </div>
+
+    <div>
+      <label>Year:</label>
+      <input type="number" th:field="*{year}" min="1" max="4" />
+      <div th:if="${#fields.hasErrors('year')}" th:errors="*{year}"></div>
+    </div>
+
+    <div>
+      <button type="submit">Register</button>
+    </div>
+  </form>
+
+  <p><a th:href="@{/students}">View all students</a></p>
+</body>
+</html>
