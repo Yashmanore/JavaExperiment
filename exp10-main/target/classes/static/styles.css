@@ -1,7 +1,6 @@
-body { font-family: Arial, sans-serif; background:#f7f7f7; color:#333; }
-.container { max-width:800px; margin:40px auto; background:#fff; padding:20px; border-radius:6px; box-shadow:0 2px 6px rgba(0,0,0,0.08);}
-h1 { margin-top:0; }
-input { padding:8px; margin:6px 4px; }
-button { margin-left:8px; padding:6px 10px; }
-ul { list-style:none; padding:0; }
-li { padding:8px 0; border-bottom:1px solid #eee; display:flex; justify-content:space-between; align-items:center;}
+body { font-family: system-ui, Arial, sans-serif; margin: 2rem; }
+label { display: inline-block; width: 140px; }
+input { padding: .4rem; margin:.2rem 0; }
+div[th\:errors], .error { color: #b00020; font-size: .9rem; }
+table { border-collapse: collapse; }
+th, td { padding: .5rem .75rem; }
