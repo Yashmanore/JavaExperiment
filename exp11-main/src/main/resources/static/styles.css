@@ -1,0 +1,6 @@
+body { font-family: system-ui, Arial, sans-serif; margin: 2rem; }
+label { display: inline-block; width: 140px; }
+input { padding: .4rem; margin:.2rem 0; }
+div[th\:errors], .error { color: #b00020; font-size: .9rem; }
+table { border-collapse: collapse; }
+th, td { padding: .5rem .75rem; }

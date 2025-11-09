@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"/><title>Students</title>
+<link rel="stylesheet" th:href="@{/styles.css}" />
+</head>
+<body>
+  <h1>Registered Students</h1>
+
+  <div th:if="${successMessage}">
+    <strong th:text="${successMessage}"></strong>
+  </div>
+
+  <table border="1">
+    <thead>
+      <tr><th>Roll</th><th>Name</th><th>Email</th><th>Dept</th><th>Year</th></tr>
+    </thead>
+    <tbody>
+      <tr th:each="s : ${students}">
+        <td th:text="${s.rollNumber}">roll</td>
+        <td th:text="${s.firstName + ' ' + s.lastName}">name</td>
+        <td th:text="${s.email}">email</td>
+        <td th:text="${s.department}">dept</td>
+        <td th:text="${s.year}">year</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><a th:href="@{/students/new}">Register another student</a></p>
+</body>
+</html>
